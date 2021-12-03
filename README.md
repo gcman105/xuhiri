@@ -1,2 +1,2 @@
-# xuhiri
-Xuhiri is a Hugo theme that uses tailwind css.
+# hugo-starter-tailwind
+This theme **hugo-starter-tailwind** is a Hugo theme that uses tailwind css.
