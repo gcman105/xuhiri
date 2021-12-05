@@ -1,13 +1,27 @@
 // tailwind.config.js
+// const defaultTheme = require('tailwindcss/defaultTheme')
+import { defaultTheme } from 'tailwindcss/defaultTheme'
+import { colors } from 'tailwindcss/colors'
+
 module.exports = {
     purge: [
         './layouts/**/*.html',
         './layouts/**/*.js',
     ],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+            },
+        },
     },
     variants: {},
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/aspect-ratio')
+    ],
 }
